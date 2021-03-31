@@ -12,3 +12,8 @@ const { users } = require('./state')
 
 app.listen(port, () => 
   console.log(`Example app listening on port ${port}!`))
+
+app.get("/users", function(req,res) {
+  console.log("current users", users);
+  res.send("hi");
+})
